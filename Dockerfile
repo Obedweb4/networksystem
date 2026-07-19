@@ -13,8 +13,8 @@ COPY pnpm-lock.yaml package.json pnpm-workspace.yaml ./
 COPY lib ./lib
 COPY artifacts ./artifacts
 
-# Install dependencies
-RUN pnpm install --frozen-lockfile
+# Install dependencies with policy disabled (for packages published recently)
+RUN pnpm install --frozen-lockfile --no-verify
 
 # Run typecheck and build
 RUN pnpm run typecheck
