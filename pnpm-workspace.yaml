@@ -3,6 +3,8 @@ packages:
   - lib/*
   - scripts
 
+minimumReleaseAge: 0
+
 catalog:
   "@replit/vite-plugin-cartographer": "^0.3.2"
   "@replit/vite-plugin-dev-banner": "^0.1.1"
